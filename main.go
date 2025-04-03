@@ -2,8 +2,9 @@ package main
 
 import (
 	"net/http"
-	controller "github.com/jeffthorne/tasky/controllers"
+
 	"github.com/gin-gonic/gin"
+	controller "github.com/jeffthorne/tasky/controllers"
 	"github.com/joho/godotenv"
 )
 
@@ -13,7 +14,7 @@ func index(c *gin.Context) {
 
 func main() {
 	godotenv.Overload()
-	
+
 	router := gin.Default()
 	router.LoadHTMLGlob("assets/*.html")
 	router.Static("/assets", "./assets")
@@ -26,11 +27,10 @@ func main() {
 	router.DELETE("/todos/:userid", controller.ClearAll)
 	router.PUT("/todo", controller.UpdateTodo)
 
-
 	router.POST("/signup", controller.SignUp)
 	router.POST("/login", controller.Login)
 	router.GET("/todo", controller.Todo)
 
-	router.Run(":8080" )
+	router.Run(":8080")
 
 }
