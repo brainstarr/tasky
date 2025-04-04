@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: tasky-service
+spec:
+  selector:
+    app: tasky
+  type: LoadBalancer  # Exposes the app to the internet via AWS ELB
+  ports:
+  - port: 80
+    targetPort: 8080  
