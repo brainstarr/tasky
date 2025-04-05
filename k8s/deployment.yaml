@@ -22,3 +22,5 @@ spec:
         env:
         - name: ENV
           value: production
+#        - name: MONGODB_URI
+#          value: mongodb://<ec2-instance-ip>:27017
