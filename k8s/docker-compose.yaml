@@ -1,0 +1,10 @@
+version: "3.9"
+
+services:
+  web:
+    image: ghcr.io/brainstarr/tasky:latest
+    ports:
+      - "80:80"
+    environment:
+      - ADMIN_USER=admin
+      - ADMIN_PASSWORD=admin
