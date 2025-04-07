@@ -23,4 +23,4 @@ spec:
         - name: ENV
           value: production
         - name: MONGODB_URI
-          value: mongodb://10.0.1.50:27017
+          value: mongodb://10.0.1.60:27017
