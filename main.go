@@ -12,6 +12,8 @@ func index(c *gin.Context) {
 	c.HTML(http.StatusOK, "login.html", nil)
 }
 
+#comment
+
 func main() {
 	godotenv.Overload()
 
